@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+	  <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MODELS\CONFIG\**" />
+    <Compile Remove="MODELS\SCRIPT\**" />
+    <Compile Remove="SERVICE\**" />
+    <EmbeddedResource Remove="MODELS\CONFIG\**" />
+    <EmbeddedResource Remove="MODELS\SCRIPT\**" />
+    <EmbeddedResource Remove="SERVICE\**" />
+    <None Remove="MODELS\CONFIG\**" />
+    <None Remove="MODELS\SCRIPT\**" />
+    <None Remove="SERVICE\**" />
+    <Page Remove="MODELS\CONFIG\**" />
+    <Page Remove="MODELS\SCRIPT\**" />
+    <Page Remove="SERVICE\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\REPOSITORY\REPOSITORY.csproj" />
+  </ItemGroup>
+
+</Project>

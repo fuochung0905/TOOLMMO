@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOOLMMO", "TOOLMMO\TOOLMMO.csproj", "{8017D2E5-D030-4C70-84CF-16EAE4E57E77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REPOSITORY", "REPOSITORY\REPOSITORY.csproj", "{4D0B76AD-2A50-4533-A585-61478A05BE6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8017D2E5-D030-4C70-84CF-16EAE4E57E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8017D2E5-D030-4C70-84CF-16EAE4E57E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8017D2E5-D030-4C70-84CF-16EAE4E57E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8017D2E5-D030-4C70-84CF-16EAE4E57E77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D0B76AD-2A50-4533-A585-61478A05BE6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D0B76AD-2A50-4533-A585-61478A05BE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D0B76AD-2A50-4533-A585-61478A05BE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D0B76AD-2A50-4533-A585-61478A05BE6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A99F140-559D-4F00-8380-74F827381FBB}
+	EndGlobalSection
+EndGlobal
