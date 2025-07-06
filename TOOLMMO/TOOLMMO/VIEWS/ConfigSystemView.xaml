@@ -3,20 +3,65 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TOOLMMO.VIEWS"
+        xmlns:c= "clr-namespace:TOOLMMO.VIEWS.BASES.Controls"
+        xmlns:converters="clr-namespace:TOOLMMO.COMMON"
         mc:Ignorable="d"
         Title="ConfigSystemView" Height="450" Width="800">
+
+    <Window.Resources>
+        <converters:EqualsEnumConverter x:Key="EnumEqualsConverter" />
+    </Window.Resources>
+    
     <Grid>
         <StackPanel>
-            <TextBlock Text="{Binding Name}" />
+            <!--<TextBlock Text="{Binding Name}" />
 
             <Button Content="Chạy Click"
- Command="{Binding ClickCommand}"
- CommandParameter="Giá trị từ Click" />
+             Command="{Binding ClickCommand}"
+             CommandParameter="Giá trị từ Click" />
 
             <Button Content="Chạy Click1"
- Command="{Binding Click1Command}"
- CommandParameter="Giá trị từ Click1" />
+             Command="{Binding Click1Command}"
+             CommandParameter="Giá trị từ Click1" />-->
+            <c:MMOCombobox Width="250"
+                      Height="60"
+                      ItemsSource="{Binding AccountList}"
+                      SelectedItem="{Binding SelectedAccount}"
+                    IsArrowOnlyExpandEnabled="True"/>
+            <c:MMOTextBox Width="250"
+              Height="60"
+              Label="Nội dung video"
+              Text="{Binding TextValue, UpdateSourceTrigger=PropertyChanged}" />
+            
+            <c:MMONumericUpDown 
+                Width="300"
+                Height="50"
+                Label="Runtime account (s)"
+                Value="{Binding RuntimeAccount, Mode=TwoWay}" />
+
+            <c:MMOCheckBox 
+                 Width="300"
+                Height="50"
+                Content="Delete Chrome cache"
+                IsChecked="{Binding IsDeleteChromeCache}"/>
+            
+            <c:MMORadioButton GroupName="ScenarioGroup"
+                  Content="Kịch bản 1"
+                  IsChecked="{Binding SelectedScenario, Converter={StaticResource EnumEqualsConverter}, ConverterParameter=KichBan1}" />
+
+            <c:MMORadioButton GroupName="ScenarioGroup"
+                  Content="Kịch bản 2"
+                  IsChecked="{Binding SelectedScenario, Converter={StaticResource EnumEqualsConverter}, ConverterParameter=KichBan2}" />
+
+            <c:MMORadioButton GroupName="ScenarioGroup"
+                  Content="Kịch bản 3"
+                  IsChecked="{Binding SelectedScenario, Converter={StaticResource EnumEqualsConverter}, ConverterParameter=KichBan3}" />
+
+            <c:MMORadioButton GroupName="ScenarioGroup"
+                  Content="Kịch bản 4"
+                  IsChecked="{Binding SelectedScenario, Converter={StaticResource EnumEqualsConverter}, ConverterParameter=KichBan4}" />
+
+
         </StackPanel>
        
     </Grid>

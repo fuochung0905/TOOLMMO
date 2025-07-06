@@ -1,8 +1,16 @@
 ﻿<Application x:Class="TOOLMMO.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:TOOLMMO">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="VIEWS/BASES/Styles/MMOCombobox.xaml"/>
+                <ResourceDictionary Source="VIEWS/BASES/Styles/MMOTextBox.xaml"/>
+                <ResourceDictionary Source="VIEWS/BASES/Styles/MMONumbericUpDown.xaml"/>
+                <ResourceDictionary Source="VIEWS/BASES/Styles/MMOCheckBox.xaml"/>
+                <ResourceDictionary Source="VIEWS/BASES/Styles/MMORadioButton.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

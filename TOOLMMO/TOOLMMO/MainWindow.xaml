@@ -10,6 +10,7 @@
     <Grid>
         <Button Content=" hahaha"
                 Command="{Binding ClickCommand}" />
+       
 
     </Grid>
 </Window>
