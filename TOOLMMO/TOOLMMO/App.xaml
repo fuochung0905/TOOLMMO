@@ -9,7 +9,8 @@
                 <ResourceDictionary Source="VIEWS/BASES/Styles/MMONumbericUpDown.xaml"/>
                 <ResourceDictionary Source="VIEWS/BASES/Styles/MMOCheckBox.xaml"/>
                 <ResourceDictionary Source="VIEWS/BASES/Styles/MMORadioButton.xaml"/>
-
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepOrange.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -23,14 +23,12 @@ namespace TOOLMMO
             var services = new ServiceCollection();
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer("Server=.;Database=TOOLMMO;Trusted_Connection=True;TrustServerCertificate=True"));
-
-            services.AddSingleton<IUserService, UserService>();
             services.AddTransient<ConfigSystemViewModel>();
-            services.AddTransient<ConfigSystemView>();
-
+            services.AddSingleton<MainWindow>();
+            services.AddSingleton<MainViewModel>();
             ServiceProvider = services.BuildServiceProvider();
 
-            var mainWindow = ServiceProvider.GetRequiredService<ConfigSystemView>();
+            var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
             mainWindow.Show();
         }
     }

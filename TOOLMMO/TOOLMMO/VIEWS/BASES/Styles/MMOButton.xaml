@@ -1,37 +1,43 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿ 
+    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:TOOLMMO.VIEWS.BASES.Controls">
 
     <Style TargetType="{x:Type local:MMOButton}">
-        <Setter Property="Background" Value="#1976D2"/>
+        <!-- Mặc định -->
+        <Setter Property="Background" Value="#FFA726"/>
+        <!-- Cam -->
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontWeight" Value="Normal"/>
         <Setter Property="FontSize" Value="14"/>
-        <Setter Property="Padding" Value="12,6"/>
+        <Setter Property="Padding" Value="10,5"/>
         <Setter Property="Margin" Value="5"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Cursor" Value="Hand"/>
+
+        <!-- Template bo góc và nhận Content -->
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:MMOButton}">
                     <Border Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="8">
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="20">
                         <ContentPresenter HorizontalAlignment="Center"
-                                          VerticalAlignment="Center"
-                                          RecognizesAccessKey="True"/>
+                                      VerticalAlignment="Center"
+                                      RecognizesAccessKey="True"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="#1565C0"/>
+                <Setter Property="Background" Value="#FB8C00"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Background" Value="#0D47A1"/>
+                <Setter Property="Background" Value="#EF6C00"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Background" Value="LightGray"/>
@@ -39,5 +45,6 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
 
 </ResourceDictionary>

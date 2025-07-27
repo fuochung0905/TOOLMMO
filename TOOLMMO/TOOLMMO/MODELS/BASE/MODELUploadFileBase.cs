@@ -9,13 +9,14 @@ namespace MODELS.BASE
 {
     public class MODELUploadFileBase
     {
-        public double FileSizeLimit { get; set; } //Megabyte
-        public bool MultiFile { get; set; }
-        public string FileValidateText { get; set; }
-        public string[] FileValidate { get; set; }
-        public List<MODELTepDinhKem> ListTepDinhKem { get; set; } //Tệp đính kèm hiện có
-        public int RefType { get; set; }
-        public Guid? RandomIdKey { get; set; }
-        public string? FolderUpload { get; set; }
+        public double FileSizeLimitMB { get; set; }           
+        public bool AllowMultipleFiles { get; set; }          
+        public string FileValidationMessage { get; set; }     
+        public string[] AllowedFileExtensions { get; set; }
+        public List<MODELAttachment> ExistingAttachments { get; set; } 
+        public int ReferenceType { get; set; }                
+        public Guid? TempKey { get; set; }                    
+        public string? UploadFolder { get; set; }             
+
     }
 }

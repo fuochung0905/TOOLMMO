@@ -10,21 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TOOLMMO.SERVICE;
-using TOOLMMO.VIEWMODELS;
+using TOOLMMO.VIEWMODELS.ConfigSystem;
 
-namespace TOOLMMO.VIEWS
+namespace TOOLMMO.VIEWS.ConfigSystem
 {
     /// <summary>
-    /// Interaction logic for ConfigSystemView.xaml
+    /// Interaction logic for ConfigBaseView.xaml
     /// </summary>
-    public partial class ConfigSystemView : Window
+    public partial class ConfigBaseView : UserControl
     {
-        public ConfigSystemView(ConfigSystemViewModel viewModel)
+        public ConfigBaseView(ConfigBaseViewModel configBaseViewModel)
         {
             InitializeComponent();
-            DataContext = viewModel;
+            DataContext = configBaseViewModel;
         }
     }
 }

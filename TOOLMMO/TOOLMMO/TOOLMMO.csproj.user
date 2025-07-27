@@ -7,7 +7,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="VIEWS\ConfigSystemView.xaml.cs">
+    <Compile Update="VIEWS\ConfigSystem\ConfigBaseView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="VIEWS\ConfigSystem\ConfigSystemView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -33,7 +36,10 @@
     <Page Update="VIEWS\BASES\Styles\MMOTextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="VIEWS\ConfigSystemView.xaml">
+    <Page Update="VIEWS\ConfigSystem\ConfigBaseView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="VIEWS\ConfigSystem\ConfigSystemView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

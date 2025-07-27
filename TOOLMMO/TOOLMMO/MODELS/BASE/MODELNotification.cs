@@ -8,8 +8,8 @@ namespace MODELS.BASE
 {
     public class MODELNotification
     {
-        public string NguoiNhan { get; set; }
-        public string NguoiGui { get; set; }
+        public string Receiver { get; set; }
+        public string Sender { get; set; }
         public string Message { get; set; }
         public string Action { get; set; } = "";
     }
