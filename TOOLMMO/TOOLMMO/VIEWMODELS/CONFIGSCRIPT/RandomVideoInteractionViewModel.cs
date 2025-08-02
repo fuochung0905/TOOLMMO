@@ -1,9 +1,13 @@
-﻿using System.Collections.ObjectModel;
+﻿using CommunityToolkit.Mvvm.Input;
+using System.Collections.ObjectModel;
+using TOOLMMO.VIEWMODELS.LISTACCOUNTCUSTOM;
+using TOOLMMO.VIEWS.ConfigCustom;
 
 namespace TOOLMMO.VIEWMODELS.CONFIGSCRIPT
 {
     public partial class RandomVideoInteractionViewModel : BaseScriptViewModel
     {
+        private readonly MainViewModel _mainVm;
         private int _commentVideo;
         public int Comment
         {
@@ -14,8 +18,16 @@ namespace TOOLMMO.VIEWMODELS.CONFIGSCRIPT
                 UpdateCommentFolders();
             }
         }
+        [RelayCommand]
+        private void NavigateToSelectUser()
+        {
+            var selectUserViewModel = new ListAccountViewModel();
+            var view = new ListAccountView(selectUserViewModel);
+            _mainVm.CurrentPage = view;
+        }
         public RandomVideoInteractionViewModel(MainViewModel mainVm): base(mainVm)
         {
+            _mainVm = mainVm;
             CommentFolders = new ObservableCollection<string>();
         }
         public ObservableCollection<string> CommentFolders { get; set; } = new();

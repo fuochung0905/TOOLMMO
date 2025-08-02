@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="VIEWS\ConfigCustom\ListAccountView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="VIEWS\ConfigScript\BaseScriptView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="VIEWS\BASES\Styles\MMOTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="VIEWS\ConfigCustom\ListAccountView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="VIEWS\ConfigScript\BaseScriptView.xaml">

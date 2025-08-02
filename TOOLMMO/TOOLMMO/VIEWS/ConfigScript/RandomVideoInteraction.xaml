@@ -74,7 +74,7 @@
                          Background="#F57C00"
                          BorderThickness="0"
                          Cursor="Hand"
-                         Command="{Binding NavigateToConfigScenarioCommand}"  />
+                         Command="{Binding NavigateToSelectUserCommand}"  />
                     </StackPanel>
                 </Border>
             </StackPanel>
