@@ -47,6 +47,7 @@
 
   <ItemGroup>
     <Folder Include="FILES\" />
+    <Folder Include="VIEWMODELS\LISTACCOUNTCUSTOM\" />
   </ItemGroup>
 
 </Project>

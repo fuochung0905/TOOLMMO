@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="TOOLMMO.VIEWS.ConfigScript.TopicAccountMaintenanceView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TOOLMMO.VIEWS.ConfigScript"
+             xmlns:c="clr-namespace:TOOLMMO.VIEWS.BASES.Controls"
+             mc:Ignorable="d" 
+             Width="400"
+             Background="White">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="10">
+                <local:BaseScriptView />
+                <Border  BorderBrush="LightGray" BorderThickness="1" CornerRadius="4">
+                    <StackPanel>
+                        <Label Content="NUÔI TÀI KHOẢN THEO CHỦ ĐỀ" FontSize="15" FontWeight="Bold" Padding="5,5,5,0"/>
+                        <StackPanel Margin="5">
+                            <c:MMOCombobox Width="300"
+                              Height="60"
+                              ItemsSource="{Binding AccountList}"
+                              SelectedItem="{Binding SelectedAccount}"
+                              IsArrowOnlyExpandEnabled="True"/>
+
+                            <c:MMOTextBox Width="300"
+                             Height="60"
+                             Label="Nội dung video"
+                             Text="{Binding ContenVideoTxt, UpdateSourceTrigger=PropertyChanged}" />
+
+                            <c:MMOTextBox Width="300"
+                             Height="60"
+                             Label="Hashtag"
+                             Text="{Binding HashtagTxt, UpdateSourceTrigger=PropertyChanged}" />
+
+                            <c:MMOCheckBox 
+                            Width="300"
+                            Height="50"                       
+                            Content="Xóa video đã đăng thành công"
+                            IsChecked="{Binding IsDeleteVideoSuccess}"/>
+                            <c:MMOCheckBox 
+                            Width="300"
+                            Height="50"                       
+                            Content="Đăng công khai"
+                            IsChecked="{Binding IsDeleteVideoSuccess}"/>
+                        </StackPanel>
+                        <c:MMOButton Content="Chạy"
+                            Height="50"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            Background="#F57C00"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Command="{Binding RunConfigCommand}"  />
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

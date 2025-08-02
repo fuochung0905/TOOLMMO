@@ -29,14 +29,14 @@ namespace TOOLMMO.VIEWMODELS
         }
 
         [RelayCommand]
-        private void OpenSidebar()
+        public void OpenSidebar()
         {
             SidebarOffset = 0;
             IsOverlayVisible = true;
         }
 
         [RelayCommand]
-        private void CloseSidebar()
+        public void CloseSidebar()
         {
             SidebarOffset = -250;
             IsOverlayVisible = false;

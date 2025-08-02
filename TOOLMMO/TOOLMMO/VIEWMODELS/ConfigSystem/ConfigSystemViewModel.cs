@@ -1,11 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
-using System.Windows.Media.Animation;
-using System.Windows.Media;
-using System.Windows;
-using TOOLMMO.SERVICE;
-using CommunityToolkit.Mvvm.Messaging;
+using TOOLMMO.VIEWMODELS.CONFIGSCRIPT;
+using TOOLMMO.VIEWS.ConfigScript;
 
 namespace TOOLMMO.VIEWMODELS
 {
@@ -19,7 +16,7 @@ namespace TOOLMMO.VIEWMODELS
 
     public partial class ConfigSystemViewModel : ObservableObject
     {
-        private readonly MainViewModel _mainVm;
+        private MainViewModel _mainVm;
 
         [ObservableProperty]
         private int _runtimeAccount = 5;
@@ -40,7 +37,7 @@ namespace TOOLMMO.VIEWMODELS
         private string _selectedAccount;
         [ObservableProperty]
         private string _textValue;
-       
+
         public ConfigSystemViewModel(MainViewModel mainVm)
         {
             _mainVm = mainVm;
@@ -71,5 +68,49 @@ namespace TOOLMMO.VIEWMODELS
         {
             Name = name;
         }
+        [RelayCommand]
+        private void NavigateToConfigScenario()
+        {
+
+            switch (SelectedScenario)
+            {
+                case ScenarioOption.KichBan1:
+                {
+                        var postVideoViewModel = new PostVideoViewModel(_mainVm);
+                        var view = new PostVideoView
+                        {
+                            ViewModel = postVideoViewModel 
+                        };
+
+                        _mainVm.CurrentPage = view;
+                    break;
+                }
+                case ScenarioOption.KichBan2:
+                {
+                        var randomVideoInteractionViewModel = new RandomVideoInteractionViewModel(_mainVm);
+                        var view = new RandomVideoInteraction
+                        {
+                            ViewModel = randomVideoInteractionViewModel
+                        };
+
+                        _mainVm.CurrentPage = view;
+                        break;
+                }
+                case ScenarioOption.KichBan3:
+                {
+                        var topicAccountMaintenanceViewModel = new TopicAccountMaintenanceViewModel(_mainVm);
+                        var view = new TopicAccountMaintenanceView
+                        {
+                            ViewModel = topicAccountMaintenanceViewModel
+                        };
+
+                        _mainVm.CurrentPage = view;
+                        break;
+                }
+            }
+
+            _mainVm.CloseSidebar();
+        }
     }
+
 }

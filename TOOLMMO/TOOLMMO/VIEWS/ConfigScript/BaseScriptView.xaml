@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="TOOLMMO.VIEWS.ConfigScript.BaseScriptView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TOOLMMO.VIEWS.ConfigScript"
+             xmlns:c="clr-namespace:TOOLMMO.VIEWS.BASES.Controls"
+             mc:Ignorable="d" 
+             Width="400"
+             Background="White">
+    <Grid>
+        <StackPanel>
+            <Border Background="#1E88E5" Padding="10" DockPanel.Dock="Top" CornerRadius="15,15,0,0">
+                <DockPanel>
+                    <Button Width="30" Height="30"
+        Background="Transparent"
+        BorderThickness="0"
+        Command="{Binding ToggleSidebarCommand}">
+                        <Path Data="M0,4 L24,4 M0,12 L24,12 M0,20 L24,20"
+          Stroke="White"
+          StrokeThickness="2"
+          Stretch="Uniform"/>
+                    </Button>
+                    <TextBlock Text="Cấu hình kịch bản"
+            Foreground="White"
+            FontSize="18"
+            FontWeight="Bold"
+            VerticalAlignment="Center"
+            Margin="10,0,0,0"/>
+                </DockPanel>
+            </Border>
+            <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="4" Margin="0,0,0,15">
+                <StackPanel>
+                    <Label Content="Cấu hình chung" FontWeight="Bold" Padding="5,5,5,0"/>
+                    <StackPanel Margin="5">
+                        <Label Content="Trước khi chạy" FontWeight="Bold" Padding="5,5,5,0"/>
+                        <c:MMOCheckBox 
+                        Width="300"
+                        Height="50"
+                        Content="Delete chrome cache"
+                        IsChecked="{Binding IsShowPhotoWhileOpen}"/>
+                        <c:MMOCheckBox 
+                        Width="300"
+                        Height="50"                       
+                        Content="Mix acount"
+                        IsChecked="{Binding IsShowPhotoWhileOpen}"/>
+                        <Label Content="Khi chạy" FontWeight="Bold" Padding="5,5,5,0"/>
+                        <c:MMOCheckBox 
+                        Width="300"
+                        Height="50"                       
+                        Content="Mix action on script run"
+                        IsChecked="{Binding IsMixActionOnScriptRun}"/>
+                        <c:MMONumericUpDown 
+                        Width="300"
+                        Height="50"
+                        Label="Runtime account (s)"
+                        Value="{Binding RuntimeAccount, Mode=TwoWay}"/>
+                        <c:MMONumericUpDown 
+                        Width="300"
+                        Height="50"
+                        Label="Runtime script (min)"
+                        Value="{Binding RuntimeScript, Mode=TwoWay}"/>
+                        <Label Content="Sau khi chạy" FontWeight="Bold" Padding="5,5,5,0"/>
+                        <c:MMOCheckBox 
+                        Width="300"
+                        Height="50"                       
+                        Content="Relay Script"
+                        IsChecked="{Binding IsRelayScript}"/>
+                        <c:MMONumericUpDown 
+                        Width="300"
+                        Height="50"
+                        Label="Interaction (min)"
+                        Value="{Binding Intertion, Mode=TwoWay}"/>
+                        <c:MMONumericUpDown 
+                        Width="300"
+                        Height="50"
+                        Label="Daylay for next run (s)"
+                        Value="{Binding DaylayForNextRun, Mode=TwoWay}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>

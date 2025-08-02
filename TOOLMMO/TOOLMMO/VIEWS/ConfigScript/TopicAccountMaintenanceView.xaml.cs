@@ -12,20 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TOOLMMO.VIEWMODELS;
+using TOOLMMO.VIEWMODELS.CONFIGSCRIPT;
 
-namespace TOOLMMO.VIEWS.ConfigSystem
+namespace TOOLMMO.VIEWS.ConfigScript
 {
     /// <summary>
-    /// Interaction logic for ConfigSystemView.xaml
+    /// Interaction logic for TopicAccountMaintenanceView.xaml
     /// </summary>
-    public partial class ConfigSystemView : UserControl
+    public partial class TopicAccountMaintenanceView : UserControl
     {
-        public ConfigSystemView(ConfigSystemViewModel configSystemViewModel)
+        public BaseScriptViewModel ViewModel
+        {
+            get => (BaseScriptViewModel)DataContext;
+            set => DataContext = value;
+        }
+        public TopicAccountMaintenanceView()
         {
             InitializeComponent();
-            DataContext = configSystemViewModel;
-
         }
     }
 }

@@ -7,6 +7,18 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="VIEWS\ConfigScript\BaseScriptView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="VIEWS\ConfigScript\PostVideoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="VIEWS\ConfigScript\RandomVideoInteraction.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="VIEWS\ConfigScript\TopicAccountMaintenanceView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="VIEWS\ConfigSystem\ConfigBaseView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,6 +46,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="VIEWS\BASES\Styles\MMOTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="VIEWS\ConfigScript\BaseScriptView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="VIEWS\ConfigScript\PostVideoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="VIEWS\ConfigScript\RandomVideoInteraction.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="VIEWS\ConfigScript\TopicAccountMaintenanceView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="VIEWS\ConfigSystem\ConfigBaseView.xaml">

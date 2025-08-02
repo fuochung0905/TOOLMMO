@@ -9,11 +9,12 @@
                xmlns:viewmodels="clr-namespace:TOOLMMO.VIEWMODELS"
                d:DataContext="{d:DesignInstance Type=viewmodels:ConfigSystemViewModel}"
                mc:Ignorable="d"
-               Height="600" Width="400">
+               Height="600" Width="400"
+               Background="White">
     <UserControl.Resources>
         <converters:EqualsEnumConverter x:Key="EnumEqualsConverter"/>
     </UserControl.Resources>
-    <Grid Background="White">
+    <Grid>
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <Border Margin="10" CornerRadius="15" BorderBrush="LightGray" BorderThickness="1" Panel.ZIndex="0">
                 <Grid>
@@ -51,33 +52,25 @@
                                 </StackPanel.Resources>
 
                                 <c:MMORadioButton GroupName="ScenarioGroup"
-         Content="kịch bản 1"
-         FontSize="30"
+         Content="Đăng video hàng loạt"
+         FontSize="20"
          FontWeight="Bold"                                                 
          VerticalContentAlignment="Center"
          IsChecked="{Binding SelectedScenario, Converter={StaticResource EnumEqualsConverter}, ConverterParameter=KichBan1}" />
 
                                 <c:MMORadioButton GroupName="ScenarioGroup"
-         Content="kịch bản 2"
-         FontSize="30"
+         Content="Tương tác video ngẫu nhiên"
+         FontSize="20"
          FontWeight="Bold"
          VerticalContentAlignment="Center"
          IsChecked="{Binding SelectedScenario, Converter={StaticResource EnumEqualsConverter}, ConverterParameter=KichBan2}" />
 
                                 <c:MMORadioButton GroupName="ScenarioGroup"
-         Content="kịch bản 3"
-         FontSize="30"
+         Content="Nuôi tài khoản theo chủ đề"
+         FontSize="20"
          FontWeight="Bold"
          VerticalContentAlignment="Center"
          IsChecked="{Binding SelectedScenario, Converter={StaticResource EnumEqualsConverter}, ConverterParameter=KichBan3}" />
-
-                                <c:MMORadioButton GroupName="ScenarioGroup"
-         Content="kịch bản 4"
-         FontSize="30"
-         FontWeight="Bold"
-         VerticalContentAlignment="Center"
-         IsChecked="{Binding SelectedScenario, Converter={StaticResource EnumEqualsConverter}, ConverterParameter=KichBan4}" Checked="MMORadioButton_Checked" />
-
                             </StackPanel>
                         </ScrollViewer>
                     </DockPanel>
@@ -90,7 +83,7 @@
                                Background="#F57C00"
                                BorderThickness="0"
                                Cursor="Hand"
-                               Command="{Binding ConfigureScenarioCommand}" />
+                               Command="{Binding NavigateToConfigScenarioCommand}"  />
                     </Border>
 
                 </Grid>

@@ -5,7 +5,9 @@ using System.Windows;
 using TOOLMMO.MODELS.ENITIES;
 using TOOLMMO.SERVICE;
 using TOOLMMO.VIEWMODELS;
+using TOOLMMO.VIEWMODELS.CONFIGSCRIPT;
 using TOOLMMO.VIEWS;
+using TOOLMMO.VIEWS.ConfigScript;
 
 namespace TOOLMMO
 {
@@ -24,6 +26,8 @@ namespace TOOLMMO
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer("Server=.;Database=TOOLMMO;Trusted_Connection=True;TrustServerCertificate=True"));
             services.AddTransient<ConfigSystemViewModel>();
+            services.AddTransient<PostVideoViewModel>();
+            services.AddTransient<RandomVideoInteractionViewModel>();
             services.AddSingleton<MainWindow>();
             services.AddSingleton<MainViewModel>();
             ServiceProvider = services.BuildServiceProvider();

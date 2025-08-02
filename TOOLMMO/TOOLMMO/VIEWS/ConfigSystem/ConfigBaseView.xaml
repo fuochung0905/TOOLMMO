@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:TOOLMMO.VIEWS.ConfigSystem"
              xmlns:c="clr-namespace:TOOLMMO.VIEWS.BASES.Controls"
              mc:Ignorable="d" 
-             Height="600" Width="400"
+             Width="400"
              Background="White">
     <Grid>
         <ScrollViewer VerticalScrollBarVisibility="Auto">
@@ -102,7 +102,7 @@
                 <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="4" Margin="0,0,0,15">
                     <StackPanel>
                         <Label Content="Proxy" FontWeight="Bold" Padding="5,5,5,0"/>
-                        <c:MMOTextBox Width="250"
+                        <c:MMOTextBox Width="300"
                                 Height="60"
                                 Label="Key API"
                                 Text="{Binding TextValue, UpdateSourceTrigger=PropertyChanged}" />
